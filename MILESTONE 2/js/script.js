@@ -1,6 +1,7 @@
 // MILESTONE 2
 // Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
 
+
 Vue.config.devtools = true;
 
 const app = new Vue({
@@ -30,8 +31,8 @@ const app = new Vue({
         ]
     },
     methods: {
-        remove: function(){
-            alert('prova');
-        }
+        remove: function(index){
+            this.listToDo.splice(index, 1);
+        } 
     }
 });
